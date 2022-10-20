@@ -1,7 +1,9 @@
 
 import cv2
+
+recog_path ='../data/face_model_main.yml'
 recognizer = cv2.face.LBPHFaceRecognizer_create()         # 啟用訓練人臉模型方法
-recognizer.read(f'../data/face_model_main.yml')                               # 讀取人臉模型檔
+recognizer.read(recog_path)                               # 讀取人臉模型檔
 # recognizer.read(f'./face_model2.yml')                               # 讀取人臉模型檔
 cascade_path = "../model/haarcascade_frontalface_default.xml"  # 載入人臉追蹤模型
 face_cascade = cv2.CascadeClassifier(cascade_path)        # 啟用人臉追蹤
